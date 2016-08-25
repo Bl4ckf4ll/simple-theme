@@ -1,0 +1,125 @@
+.nav
+	.navbar-nav
+		margin: 0
+		li
+			a
+				color: $dark-color
+				transition: all .5s ease
+			&:hover
+				a
+					background-color: $light-color-dark
+					color: $dark-color
+		.menu-item-object-custom
+			background-color: $main-color
+			a
+				color: $light-color
+		.current_page_item
+			background-color: $accent-color
+			a
+				color: $light-color
+
+.menu-button
+	display: none
+	align-items: center
+	justify-content: center
+	position: absolute
+	right: 15px
+	width: 50px
+	height: 50px
+	cursor: pointer
+	.bars
+		position: relative
+		width: 35px
+		height: 5px
+		background-color: $dark-color
+		transition: all .5s ease
+		&::before,
+		&::after
+			content: ""
+			position: absolute
+			width: 35px
+			height: 5px
+			background-color: $dark-color
+			transition: all .5s ease
+		&::before
+			top: -10px
+		&::after
+			bottom: -10px
+
+.close-nav
+	.bars
+		background-color: transparent
+		transform: rotate(360deg)
+		&::before,
+		&::after
+			background-color: $light-color
+		&::before
+			animation: closeTop 1s
+			top: 0
+			transform: rotate(45deg)
+		&::after
+			animation: closeBottom 1s
+			bottom: 0
+			transform: rotate(-45deg)
+
+@keyframes closeTop
+	0%
+		top: -10px
+		transform: rotate(0deg)
+	50%
+		top: 0
+		transform: rotate(0deg)
+	100%
+		transform: rotate(45deg)
+
+@keyframes closeBottom
+	0%
+		bottom: -10px
+		transform: rotate(0deg)
+	50%
+		bottom: 0
+		transform: rotate(0deg)
+	100%
+		transform: rotate(-45deg)
+
+.main-nav
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	background-color: $light-color
+	z-index: 999
+	transition: all .5s ease
+	.container-fluid
+		.navbar-brand
+			color: $dark-color
+			transition: all .5s ease
+
+.side-nav-open
+	background-color: $main-color
+	.container-fluid
+		.navbar-brand
+			color: $light-color
+
+.mobile-nav
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: $light-color
+	transform: translateX(-100%)
+	transition: all .5s ease
+	z-index: 999
+	ul
+		li
+			a
+				display: inline-block
+				padding: 20px
+				width: 100%
+				min-height: 45px
+				font-size: 25px
+
+@media screen and (max-width: 767px)
+	.menu-button
+		display: flex
