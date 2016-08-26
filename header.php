@@ -10,7 +10,9 @@
 		<nav class="nav main-nav">
 			<div class="container-fluid">
 				<div class="navbar-header pull-left">
-					<a class="navbar-brand text-uppercase text-light" href="<?= home_url(); ?>"><?php bloginfo('name') ?></a>
+					<a class="navbar-brand text-uppercase text-light" href="<?= home_url(); ?>">
+						<?php require_once(THEMEDIR . '/inc/core/components/site-identity.php'); ?>
+					</a>
 				</div>
 				<div class="collapse navbar-collapse pull-right">
 					<?php wp_nav_menu(array('menu' => 'main-menu', 'container' => 'ul', 'menu_class' => 'nav navbar-nav')); ?>

@@ -1,9 +1,28 @@
 <?php
 
 function simple_customize_register ($wp_customize) {
+	/* Site Custom Identity */
+	$wp_customize->add_section('custom_identity', array(
+		'title' => 'Site Custom Identity',
+		'description' => 'Add Logo'
+	));
+
+	$wp_customize->add_setting('site_logo', array(
+		'default' => '',
+		'transport' => 'refresh'
+	));
+
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'site_logo', array(
+			'label' => 'Site Logo',
+			'section' => 'custom_identity',
+			'settings' => 'site_logo'
+		)
+	));
+
 	/* Layout Settings */
 	$wp_customize->add_section('layout', array(
-		'title' => 'Theme Layout'
+		'title' => 'Theme Layout',
+		'description' => 'Customize theme layout (loops, sidebars, featured posts, etc)'
 	));
 
 	/** Posts Section Width **/

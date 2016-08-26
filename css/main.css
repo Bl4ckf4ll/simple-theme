@@ -89,7 +89,7 @@ form input[type="text"],
 form input[type="email"],
 form input[type="name"],
 form textarea {
-  padding: 10px 20px;
+  padding: 10px;
   background-color: #ffffff;
   color: #424242;
   border: none; }
@@ -286,9 +286,21 @@ form label {
   -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease; }
   .main-nav .container-fluid .navbar-brand {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: #424242;
+    padding: 0;
     -webkit-transition: all 0.5s ease;
             transition: all 0.5s ease; }
+    .main-nav .container-fluid .navbar-brand img {
+      padding: 8px 0;
+      max-height: 100%; }
 
 .side-nav-open {
   background-color: #f44336; }
@@ -447,8 +459,7 @@ section {
 .comments #respond input[type="text"] {
   width: 100%;
   border: solid 1px #424242;
-  font-size: 16px;
-  font-weight: 800; }
+  font-size: 16px; }
 
 footer {
   padding: 50px;
