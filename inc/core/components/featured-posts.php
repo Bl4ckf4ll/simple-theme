@@ -1,6 +1,6 @@
 <div class="featured-posts" data-flickity='{"cellSelector": ".featured-post", "wrapAround": true, "autoPlay": 5000, "pauseAutoPlayOnHover": true}'>
 	<?php
-	$args = array('tag' => 'featured');
+	$args = array('tag' => $atts['tag']);
 	$query = new WP_Query($args); ?>
 	<?php if ($query->have_posts()) : ?>
 		<?php while ($query->have_posts()) : $query->the_post(); ?>

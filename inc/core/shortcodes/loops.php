@@ -1,7 +1,8 @@
 <?php 
 function simple_get_loop ($atts) {
 	$atts = shortcode_atts(array(
-			'loop' => 'default'
+			'loop' => 'default',
+			'cat' => ''
 		), $atts, 'simple_get_loop');
 
 	switch ($atts['loop']) {
