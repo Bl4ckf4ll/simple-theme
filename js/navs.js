@@ -18,14 +18,14 @@ jQuery(function () {
 	button.click(function () {
 		if (jQuery(this).hasClass("close-nav")) {
 			mobile_nav.css({"transform": "translateX(-100%)"});
-			main_wrapper.css({"transform": "translateX(0)"});
-			jQuery("body").css("overflow", "visible");
+			main_wrapper.css({"transform": "translateX(0) scale(1)"});
+			jQuery("html").css("overflow-y", "visible");
 			jQuery(this).removeClass("close-nav");
 			main_nav.removeClass("side-nav-open");
 		} else {
 			mobile_nav.css({"transform": "translateX(0)"});
-			main_wrapper.css({"transform": "translateX(100%)"});
-			jQuery("body").css("overflow", "hidden");
+			main_wrapper.css({"transform": "translateX(100%) scale(0)"});
+			jQuery("html").css("overflow", "hidden");
 			jQuery(this).addClass("close-nav");
 			main_nav.addClass("side-nav-open");
 		}
