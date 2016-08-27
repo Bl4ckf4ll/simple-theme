@@ -333,6 +333,23 @@ form label {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; } }
+.features-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .features-container .feature-container {
+    float: left;
+    padding: 20px; }
+    .features-container .feature-container .feature {
+      text-align: center;
+      background-color: #ffffff; }
+      .features-container .feature-container .feature .feature-content {
+        padding: 10px 20px; }
+
 .main-wrapper {
   -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease; }

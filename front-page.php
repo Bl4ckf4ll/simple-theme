@@ -48,7 +48,7 @@
 			<h2 class="section-heading text-light">Contact</h2>
 		</div>
 		<div class="container section-content">
-			<?= do_shortcode('[wpforms id="24"]'); ?>
+			<?= do_shortcode('[wpforms id="5"]'); ?>
 		</div>
 	</section>
 </div>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-<div class="main-wrapper">	
+<div class="main-wrapper">
 	<div class="container content-wrapper">
-		<div class="posts-container col-xs-8">
+		<div class="page-container col-xs-8">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<!-- post -->
 				<div <?php post_class() ?>>

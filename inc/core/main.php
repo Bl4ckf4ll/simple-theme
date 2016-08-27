@@ -7,9 +7,10 @@ define('THEMEDIR', get_stylesheet_directory());
 
 function simple_setup () {
 	add_theme_support('post-thumbnails');
-
+	/* Register Nav Menus */
 	register_nav_menu('main-menu', 'Main menu on the header');
 
+	/* Register Sidebars */
 	register_sidebar(array(
 		'name' => 'Sidebar',
 		'id' => 'sidebar',
@@ -49,6 +50,13 @@ function simple_setup () {
 		'before_title' => '<h2 class="widgettitle">',
 		'after_title' => "</h2>"
 	));
+
+	/* Register Post Types */
+	register_post_type('simple_features', array(
+		'label' => 'Simple Features',
+		'public' => true,
+		'supports' => array('thumbnail', 'title', 'revisions', 'editor')
+	));
 }
 
 add_action('init', 'simple_setup');
@@ -71,6 +79,7 @@ add_action('wp_enqueue_scripts', 'simple_add_scripts');
 require_once('settings/customize.php');
 require_once('styles/customize.php');
 require_once('shortcodes/loops.php');
-require_once('shortcodes/featured-posts.php')
+require_once('shortcodes/featured-posts.php');
+require_once('shortcodes/features.php');
 
 ?>

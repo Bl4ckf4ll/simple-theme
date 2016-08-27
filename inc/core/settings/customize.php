@@ -19,7 +19,7 @@ function simple_customize_register ($wp_customize) {
 		)
 	));
 
-	/* Layout Settings */
+	### Layout Settings ###
 	$wp_customize->add_section('layout', array(
 		'title' => 'Theme Layout',
 		'description' => 'Customize theme layout (loops, sidebars, featured posts, etc)'
@@ -69,10 +69,10 @@ function simple_customize_register ($wp_customize) {
 		)
 	));
 
-	/* Colors Settings */
+	### Style Settings ###
 
-	$wp_customize->add_section('colors', array(
-		'title' => 'Theme Colors',
+	$wp_customize->add_section('styling_settings', array(
+		'title' => 'Theme Styling',
 		'priority' => 30
 	));
 
@@ -88,15 +88,28 @@ function simple_customize_register ($wp_customize) {
 
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'main_color', array(
 			'label' => 'Main Color',
-			'section' => 'colors',
+			'section' => 'styling_settings',
 			'settings' => 'main_color'
 		)
 	));
 
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'accent_color', array(
 			'label' => 'Accent Color',
-			'section' => 'colors',
+			'section' => 'styling_settings',
 			'settings' => 'accent_color'
+		)
+	));
+
+	/** Custom Styles **/
+	$wp_customize->add_setting('custom_styles', array(
+		'default' => '.body {background-color: transparent}',
+		'transport' => 'refresh'
+	));
+
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'custom_styles', array(
+			'label' => 'Custom Styles',
+			'section' => 'styling_settings',
+			'type' => 'textarea'
 		)
 	));
 }
