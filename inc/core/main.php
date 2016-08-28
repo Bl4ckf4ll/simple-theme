@@ -57,6 +57,8 @@ function simple_setup () {
 		'public' => true,
 		'supports' => array('thumbnail', 'title', 'revisions', 'editor')
 	));
+
+	add_action('customize_register', 'simple_customize_register');
 }
 
 add_action('init', 'simple_setup');
@@ -82,5 +84,6 @@ require_once('shortcodes/loops.php');
 require_once('shortcodes/featured-posts.php');
 require_once('shortcodes/features.php');
 require_once('shortcodes/hero.php');
+require_once('shortcodes/buttons.php');
 
 ?>

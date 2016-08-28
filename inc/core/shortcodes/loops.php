@@ -1,4 +1,4 @@
-<?php 
+<?php
 function simple_get_loop ($atts) {
 	$atts = shortcode_atts(array(
 			'loop' => 'default',
@@ -7,13 +7,19 @@ function simple_get_loop ($atts) {
 
 	switch ($atts['loop']) {
 		case 'default':
+				ob_start();
 				require(THEMEDIR . '/inc/core/loops/default.php');
+				return ob_get_clean();
 			break;
 		case 'masonry':
+				ob_start();
 				require(THEMEDIR . '/inc/core/loops/masonry.php');
+				return ob_get_clean();
 			break;
 		default:
+				ob_start();
 				require(THEMEDIR . '/inc/core/loops/default.php');
+				return ob_get_clean();
 			break;
 	}
 }
