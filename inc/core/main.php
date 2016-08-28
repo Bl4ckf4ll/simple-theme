@@ -80,10 +80,6 @@ add_action('wp_enqueue_scripts', 'simple_add_scripts');
 
 require_once('settings/customize.php');
 require_once('styles/customize.php');
-require_once('shortcodes/loops.php');
-require_once('shortcodes/featured-posts.php');
-require_once('shortcodes/features.php');
-require_once('shortcodes/hero.php');
-require_once('shortcodes/buttons.php');
+require_once('shortcodes/shortcodes.php');
 
 ?>
