@@ -81,5 +81,6 @@ require_once('styles/customize.php');
 require_once('shortcodes/loops.php');
 require_once('shortcodes/featured-posts.php');
 require_once('shortcodes/features.php');
+require_once('shortcodes/hero.php');
 
 ?>

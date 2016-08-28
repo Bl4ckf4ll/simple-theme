@@ -368,7 +368,7 @@ section {
 .section-red {
   background-color: #f44336; }
 
-#hero {
+.hero {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -382,11 +382,9 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  background-image: url("http://simpletheme.davidmaravilla.netai.net/wp-content/uploads/2016/08/hero.jpg");
   background-size: cover; }
-
-#hero .hero-content {
-  z-index: 10; }
+  .hero .hero-content {
+    z-index: 10; }
 
 #features .feature {
   margin-bottom: 100px;
