@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="main-wrapper">
 	<div class="container content-wrapper">
-		<div class="page-container col-xs-8">
+		<div class="page-container col-md-8 col-xs-12">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<!-- post -->
 				<div <?php post_class() ?>>
@@ -19,7 +19,7 @@
 				<!-- no posts found -->
 			<?php endif; ?>
 		</div>
-		<div class="sidebar sidebar-container col-xs-4">
+		<div class="sidebar sidebar-container col-md-4 col-xs-12">
 			<?php dynamic_sidebar('sidebar') ?>
 		</div>
 	</div>
