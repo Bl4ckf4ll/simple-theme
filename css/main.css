@@ -458,13 +458,16 @@ section {
 .single-thumbnail {
   height: 500px;
   background-position: 50% 0;
-  background-color: #607d8b; }
+  background-color: #607d8b;
+  background-size: cover; }
 
 .sidebar ul {
   padding: 0;
   list-style-type: none; }
 .sidebar a {
   font-weight: 800; }
+.sidebar label {
+  width: 100%; }
 
 .sidebar-container {
   padding: 0 30px; }

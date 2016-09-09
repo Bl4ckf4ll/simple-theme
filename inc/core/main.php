@@ -6,7 +6,13 @@ error_reporting(E_ALL);
 define('THEMEDIR', get_stylesheet_directory());
 
 function simple_setup () {
+	/* Post Thumbnails */
 	add_theme_support('post-thumbnails');
+
+	set_post_thumbnail_size(620, 520, true);
+	set_post_thumbnail_size(1280, 800, true);
+	set_post_thumbnail_size(1920, 1080, true);
+
 	/* Register Nav Menus */
 	register_nav_menu('main-menu', 'Main menu on the header');
 
@@ -59,7 +65,7 @@ function simple_setup () {
 	));
 }
 
-add_action('init', 'simple_setup');
+add_action('after_setup_theme', 'simple_setup');
 
 function simple_add_scripts () {
 	wp_enqueue_style('bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
