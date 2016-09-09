@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <div class="main-wrapper">
 	<?php
-		if (get_theme_mod('featured_posts')) {
+		if (get_theme_mod('featured_posts', false)) {
 			echo do_shortcode('[get_featured_posts]');
 		}
 	?>
-	<div class="<?= get_theme_mod('loop_width'); ?> content-wrapper">
+	<div class="<?= get_theme_mod('loop_width', 'container') ?> content-wrapper">
 		<div class="posts-container col-md-8 col-xs-12">
 			<?php
 			

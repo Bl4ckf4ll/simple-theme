@@ -42,7 +42,7 @@ function simple_customize_register ($wp_customize) {
 
 	/** Show Featured Posts **/
 	$wp_customize->add_setting('featured_posts', array(
-		'default' => true,
+		'default' => false,
 		'transport' => 'refresh'
 	));
 
@@ -113,5 +113,7 @@ function simple_customize_register ($wp_customize) {
 		)
 	));
 }
+
+add_action('customize_register', 'simple_customize_register');
 
 ?>

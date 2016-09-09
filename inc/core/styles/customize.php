@@ -1,8 +1,8 @@
 <?php
 
 function simple_customize_css () {
-	$main_color = get_theme_mod('main_color');
-	$accent_color = get_theme_mod('accent_color');
+	$main_color = get_theme_mod('main_color', '#f44336');
+	$accent_color = get_theme_mod('accent_color', '#607d8b');
 	?>
 		<style media="screen">
 			a {
@@ -30,6 +30,9 @@ function simple_customize_css () {
 			.single-thumbnail {
 				background-color: <?= $accent_color ?>;
 			}
+		</style>
+		<style media="screen">
+			<?= get_theme_mod('custom_styles'); ?>
 		</style>
 	<?php
 }

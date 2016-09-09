@@ -1,6 +1,9 @@
+<?php
+/* Template Name: Fullwidth */
+?>
 <?php get_header(); ?>
 <div class="main-wrapper">
-	<div class="container content-wrapper">
+	<div class="container-fluid content-wrapper">
 		<div class="page-container col-md-8 col-xs-12">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<!-- post -->

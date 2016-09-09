@@ -443,6 +443,8 @@ section {
 
 .post .post-thumbnail {
   padding: 0; }
+  .post .post-thumbnail img {
+    width: 100%; }
 
 .single-container {
   margin-top: -150px;
